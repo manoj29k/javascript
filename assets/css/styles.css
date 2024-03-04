@@ -1,0 +1,10 @@
+div{
+    /* background-color: aqua; */
+    margin: auto;
+    text-align: center;
+    color: gray;
+    padding: 100px;
+    border-radius: 20px;
+    box-shadow:10px 5px 5px 5px blue;
+    background-color: yellow;
+}
