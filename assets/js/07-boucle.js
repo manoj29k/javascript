@@ -10,6 +10,14 @@
 // ****
 // *****
 
-for (let i = '*'; i < 11; i++){
-    console.log(i);
+const repetitions = prompt("saisir un nombre entier compris entre 1 et 10");
+
+while (repetitions < 1 || repetitions > 10) {
+  repetitions = prompt("saisir un nombre entier compris entre 1 et 10");
+}
+
+let stars = "";
+for (let i = 0; i < repetitions; i++) {
+  stars = stars + "*";
+  console.log(stars)
 }
