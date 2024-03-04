@@ -20,7 +20,7 @@ console.log(hello);
 // Vous ne pouvez pas modifier une constante (on dit qu'elle est immuable)
 // `const ` va garantir que la valeur ne soit pas modifié tout au long de l'execution du script
 const constante = "autre chose";
-constante = "autre chose";
+// constante = "autre chose";
 
 // le mot clé permet aussi de déclarer des variables 
 // C'est une pratiqué désuète (c'etait la seule façon avant 2015)
