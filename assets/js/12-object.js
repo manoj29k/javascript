@@ -47,4 +47,9 @@ const car = {
 
 console.log(car.description());
 
-window.console.log()
+console.log(car['model'])
+
+// pour pouvoir boucler sur un objet io faut utiliser for(.. in ..){}car les objets son des énemurables
+for (let key in car) {
+    console.log(car[key]);
+}
