@@ -1,86 +1,72 @@
-// -----------------------------------Instructions Conditionnelles-------------------------------------
+/* --------------------------- INSTRUCTION CONDITIONNELLES --------------------------- */
 
-// Les opérateurs de comparison  (==, ===, !=, !==, >, >=, <, <=)
+//  Les opérateurs de comparaison (==, === ,!=, !==, >, >=, <, <=)
 
-// déclarer une constante condition vous lui donez en valeur unn nombre
-
-// Vérifier si ce nombre est supérieur ou égal à 18 si c'est le cas affichez vous etes majeur
-
-// Si la condition est vraie (truthy), le block d'instruction est éxécuté
-// Sinon il est ignoré
-
+// Le type booléen correspond à la valeur renvoyée lorsque l'on effectue un test sur des variables
+// Si la condition est vraie (truthy), le bloc d'instruction est éxécuté
+// Si la condition est fausse (falsy), le bloc est ignoré
 const condition = 18;
 
 if (condition >= 18) {
-  console.log("vous etes majeur");
+    console.log('Vous êtes majeur');
 }
 
-// Les opérateurs logiques
-// Déclarer une variable qui contient un nombre (démandez à l'utilisateur)
-// Si le nombre est divisible par 3 afficher dans un alert 'fizz'
-// Si le nombre est divisible par 5 afficher dans un alert 'Buzz'
-// Si le nombre est divisible par 3 et 5 afficher dans un alert 'fizzBuzz'
-// Sinon afficher dans un alert le nombre
+// Les opérateurs logiques OU (||) et ET (&&)
 
-const num = prompt("saisir un nombre");
+// Déclarer une variable qui contient un nombre (demandez à l'utilisateur)
+// let response = prompt('Donnez-moi un nombre !');
 
-if (num % 3 == 0) {
-  alert("Fizz");
-}
-if (num % 5 == 0) {
-  alert("Buzz");
-}
-if (num % 3 == 0 && num % 5 == 0) {
-  alert("FizzBuzz");
-} else {
-  alert(num);
-}
+// if (response % 3 == 0 && response % 5 == 0) {
+//     console.log('Fizz');
+// } else if (response % 5 == 0) {
+//     console.log('buzz');
+// } else if (response % 3 == 0) {
+//     console.log('fizzbuzz');
+// } else {
+//     console.log(response);
+// }
 
-// demandez un nombre 12
-// if ce nombre est egal 12
-// Bravo
-
-reponse = prompt("donne moi une nombre");
-console.log(typeof reponse);
+// response = prompt('donne moi un nombre');
+console.log(typeof response);
 // === vérifie à la fois la valeur et le type des valeurs comparées (opérandes)
-if (reponse === "12") {
-  console.log("bravo");
-} else {
-  console.log("faux");
-}
+// if (response === '12') {
+//     console.log('bravo');
+// } else {
+//     console.log('faux');
+// }
 
-// Démandez à l'utilisateur son animal préféré
-// si c'esst un chien
+// demanddez à l'utilsateur son animal préféré
+// si c'est un chien
 // vous etes quelqu'un de bien
 // si c'est un chat
 // Quelle drole d'idée
-// si c'est un poission rouge
+// si c'est un poisson rouge
 // Je ne veux plus parler avec toi
 // sinon
-// J'ai pas compris la réponse
+// je n'ai pas compris la reponse
 
-const animal = prompt("Quelle est votre animal préféré");
-if (animal == "chien") {
-  console.log("vous etes quelqu'un de bien");
-} else if (animal == "chat") {
-  console.log("Quelle drole d'idée");
-} else if (animal == "poission rouge") {
-  console.log("Je ne veux plus parler avec toi");
-} else {
-  console.log("J'ai pas compris la réponse");
-}
+const animal = prompt('Quel est votre animal préféré?');
+
+// if (animal == 'chien') {
+//     console.log("vous etes quelqu'un de bien");
+// } else if (animal == 'chat') {
+//     console.log("Quelle drole d'idée");
+// } else if (animal == 'poisson rouge') {
+//     console.log('Je ne veux plus parler avec toi');
+// } else {
+//     console.log("je n'ai pas compris la reponse");
+// }
 
 switch (animal) {
     case 'chien':
         console.log("vous etes quelqu'un de bien");
         break;
-    case 'chat' :
+    case 'chat':
         console.log("Quelle drole d'idée");
         break;
-    case 'poission rouge' :
-        console.log("Je ne veux plus parler avec toi");
-        break
-    default :
-        console.log("J'ai pas compris la réponse");
+    case 'poisson rouge':
+        console.log('Je ne veux plus parler avec toi');
+        break;
+    default:
+        console.log("je n'ai pas compris la reponse");
 }
-

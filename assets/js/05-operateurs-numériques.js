@@ -1,38 +1,31 @@
-// ---------------------------------------operateurs-numériques----------------------------------------
+/* --------------------------- OPERATEURS ARITHMETIQUE --------------------------- */
 
-// +,-,*,/,%,**
-// declarer une constante operation affecte l'addition de 8989898988 et 78798
-// Affiche en console le résultat du calcul est OPERATION
+// +, -, *, /, %, **
 
-// soustraction , multiplication et division
-let operation = 678678678 + 78798 // Addition
-console.log(`le résultat du calcul est : ${operation}`)
+let operation = 6786786 + 78798; // Addition
+console.log(`le resultat du calcul est : ${operation}`);
 
-operation = 678678678 - 78798 // Soustraction
-console.log(`le résultat du calcul est : ${operation}`)
+operation = 6786786 - 78798; // Soustraction
+console.log(`le resultat du calcul est : ${operation}`);
 
-operation = 678678678 * 78798 // Multiplication
-console.log(`le résultat du calcul est : ${operation}`)
+operation = 6786786 * 78798; // Multiplication
+console.log(`le resultat du calcul est : ${operation}`);
 
-operation = 678678678 / 78798 // Division
-console.log(`le résultat du calcul est : ${operation}`)
+operation = 6786786 / 78798; // Division
+console.log(`le resultat du calcul est : ${operation}`);
 
-operation = 60 % 3 // Reste de la division 
-console.log(`le résultat du calcul est : ${operation}`)
+operation = 10 % 3; // Modulo (reste de la division)
+console.log(`le resultat du calcul est : ${operation}`);
 
-// Démander à l'utilisateur un nombre 
-// Démander à l'utilisateur un déuxieme nombre 
+operation = 3 ** 6; // Puissance
+console.log(`le resultat du calcul est : ${operation}`);
 
-// si le nombre est divisible par le premier 
-    // afficher ce nombre est un multiple du deuxieme 
-// Sinon    
-    // Ce n'est pas un multiple
 
-const reponse = prompt ('Donne moi un nombre')
-const reponse2 = prompt ('Donne moi un autre nombre')
+// const response = prompt('Donne moi un nombre');
+// const response2 = prompt('Donne moi un autre nombre');
 
-if (reponse % reponse2 == 0) {
-    console.log(`${reponse} est un multiple de ${reponse2}`)
-} else {
-    console.log('faux')
-}
+// if (response % response2 == 0) {
+//     console.log(`${response2} est un multiple de ${response}`);
+// } else {
+//     console.log('faux');
+// }

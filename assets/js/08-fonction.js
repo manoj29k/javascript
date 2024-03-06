@@ -1,103 +1,74 @@
-/*--------------------------------------- FONCTIONS ---------------------------------------- */
+/* --------------------------- FONCTIONS --------------------------- */
 
-/* 
-    un fonction est bloc de code réutilisable 
-    qui peut être appelée à partir  d'autres parties  de votre code pour effectuer une tache spécifique.
-    Les fonctions sont un moyen utile de segmenter votre code en taches plus petits et plus facile à gérer,
-    elles permettent de réutiliser le meme code plusieurs fois  sans avoir à le copier coller
+/*
+    Une fonction est bloc de code réutilisable
+    qui peut être appelé à partir d'autres parties de votre code pour effectuer une tâche spécifique.
+    Les fonctions sont un moyen utile de segmenter votre code en tâches plus petites et plus facile à gérer,
+    elles permettent de réutiliser le même code plusieurs fois sans avoir à le copier coller
 */
 
-//  Déclaration de Function
+// Déclaration de fonction
 function hello(firstName, lastName) {
-  console.log("Bonjour " + firstName + " " + lastName);
+  console.log('Bonjour ' + firstName + ' ' + lastName);
 }
 
-hello("manoj", "kumar");
+// Une fonction n'est executée que lorsqu'elle est appelée
+hello('rachid', 'edjekouane');
 
-// Déclarer une fonction qui prend 3 parametre
-// declare un variable TVA à 20%
-// elle multiplie les 3 nombre et la TVA
-// récupere le résultat dans une variable
-// appelez la fonction
-
-function num1(x, y, z) {
-  const tva = 0.2;
-  const result = x * y * z * tva;
-
-  return "ok";
-}
-const result = num1(145, 28, 36);
-console.log(result);
-
-// Il est possible de savegarder une fonction dans une variable
-// On les appelle des fonctions anonymes
+// Il est possible de sauvegarder une fonction dans une variable
+// Fonction Anonyme
 const math = function (x, y) {
   return x * y;
 };
-math(3, 5);
 
-// fonction addition 
-const add = function (x, y) {
-    
-}
-const toto = add(3, 5);
-console.log(toto)
+const res = math(12, 89);
+console.log(res);
 
-// Arrow function  (fonction fléché)
+// Arrow function (fonction fléché)
+// Nouvelle syntaxe introduite avec ES6 (2015)
 const divide = (x, y) => {
-  return x / y
-}
-const resultat = divide(10 / 2)
-console.log(resultat)
-const arrow = x => x * 2
- 
-// crée une fonction fléché helloYou avec un parametre qui affiche Bonjour + le nom
-const helloYou = Manoj => {
-    console.log('Bonjour ' + Manoj)
-}
+  return x / y;
+};
 
-helloYou('kumar')
+const result = divide(23, 90);
+console.log(result);
 
-// Demander à l'utilisateur d'entrer un nombre
+// Il existe des façons encore plus concise d'écrire les fonctions fléchés
+const arrow = (x) => x * 2;
+const r = arrow(45);
+console.log(r);
+
+// Demander à l'utilisateur de rentrer un nombre
 // Creer une fonction fléché qui prend en parametre un nombre
-// et qui affiche dans le console si le nombre est pair ou impair(modulo)
-// Appler la fonction en lui passant le nombre 5 en parametre
-// Apper la fonction en lui passant le nombre 256 en parametre
+// Et qui affiche dans la console si le nombre est pair ou impair (modulo)
+// Appeler la fonction en lui passant le nombre 5 en parametre
+// Appeler la fonction en lui passant le nombre 256 en parametre
 
+const userInput = prompt('Quel est votre nombre ?');
 
-// const number = prompt('saisir un nombre');
-// const isEven = (number) => {
-//   return number % 2 === 0 ? 'le nombre est pair' : 'le nombre est impair';
-// };
-// console.log(isEven(number));
-
-
-// Correction
-const userInput = prompt('saisir un nombre');
-
-const evenOdd = (x) => {
+const evenOddd = (x) => {
   if (x % 2 == 0) {
-    console.log('le nombre est pair');
+      console.log('le nombre est pair');
   } else {
-    console.log('le nombre est impair');
+      console.log('le nombre est impair');
   }
-}
+};
 
-// evenOdd(userInput)
+evenOddd(userInput);
 
-// Transformez en fonction le jeu du fizbuzz
+// Déclarer une variable qui contient un nombre (demandez à l'utilisateur)
+let response = prompt('Donnez-moi un nombre !');
 
-const num = prompt('saisir un nombre')
-
-function fizzBuzz(num) {
-  if (num % 3 == 0 && num % 5 == 0) {
-    return "FizzBuzz";
-  } else if (num % 3 == 0) {
-    return "Fizz";
-  } else if (num % 5 == 0) {
-    return "Buzz";
+const fizzbuzz = (x) => {
+  if (x % 3 == 0 && x % 5 == 0) {
+      console.log('fizzbuzz');
+  } else if (x % 5 == 0) {
+      console.log('buzz');
+  } else if (x % 3 == 0) {
+      console.log('Fizz');
   } else {
-    console.log(reponse)
+      console.log(x);
   }
-}
-console.log(fizzBuzz(num))
+};
+
+fizzbuzz(response);
