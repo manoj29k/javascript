@@ -44,8 +44,15 @@ for (let i = 0 ; i < paragraph.length; i++) {
 
 // Récuper tous les paragraphes avec la méthode querySelectorAll()
  const newParagraphes = document.querySelectorAll('p')
- console.log(newParagraphes);
- for(let paragraph of newParagraphes){
-    paragraph.style.textDecoration = 'underline'
- }
+//  console.log(newParagraphes);
+//  for(let paragraph of newParagraphes){
+//     paragraph.style.textDecoration = 'underline'
+//  }
+ newParagraphes.forEach(function(paragraph){
+    paragraph.style.textDecoration = 'underline';
+})
 
+// Selectionner tous les élements qui ont la class txt-uppercase
+// Tous les mettre en majuscules
+
+const maj  = document.getElementsByTagName('body')
