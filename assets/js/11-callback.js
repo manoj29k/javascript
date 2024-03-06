@@ -24,7 +24,7 @@ const hello = function(){
 }
 
 display(function(){
-
+    console.log(23 + 67)
 })
 
 display(hello)
