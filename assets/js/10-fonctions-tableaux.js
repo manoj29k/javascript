@@ -1,42 +1,42 @@
 /* ------------------FONCTIONS SUR LESTABLEAUX------------------- */
 
 // Crée un tableau d' animaux ('chat' , 'chien' , 'tigre' , 'lion' , 'requin' , 'singe')
-const animaux = ['chat', 'chien', 'tigre', 'lion', 'requin', 'singe']
+const animals = ['chat', 'chien', 'tigre', 'lion', 'requin', 'singe']
 
 // ajoute un ou plusieurs éléments à la fin d'un tableau
 // Renvoie la nouvelle longueur du tableau
-const resultat = animaux.push('girafe', 'sanglier')
+const resultat = animals.push('girafe', 'sanglier')
 console.log(resultat)
 
 //  Supprime le dernier élément d'un tableau
-animaux.pop()
-console.log(animaux)
+animals.pop()
+console.log(animals)
 
 
 // Ajouter un ou plusieurs éléments au début du tableau
-animaux.unshift('requin', 'panda')
-console.log(animaux)
+animals.unshift('requin', 'panda')
+console.log(animals)
 
 // supprime le premier élément d'un tableau
-animaux.shift()
-console.log(animaux)
+animals.shift()
+console.log(animals)
 
 
 // Réorganiser un tableau de la fin vers le debut
-animaux.reverse()
-console.log(animaux)
+animals.reverse()
+console.log(animals)
 
 // Modifier ou ajouter o supprimer un élément d'un tableau
 // Ajouter un 'raton laveur' au deuxième élément du tableau
-animaux.splice(1, 0, 'raton laveur')
-console.log(animaux)
+animals.splice(1, 0, 'raton laveur')
+console.log(animals)
 
 // Modifier 'chien' en 'aigle'
-animaux.splice(6, 1, 'aigle')
-console.log(animaux)
+animals.splice(6, 1, 'aigle')
+console.log(animals)
 // supprimer 'panda'
-animaux.splice(8, 1, 'requin')
-console.log(animaux)
+animals.splice(8, 1, 'requin')
+console.log(animals)
 
 // Déclarer un tableau contenant ('paris', 'Berlin', 'Rome' , 'Londres','moscow' , ' madrid')
 /*
@@ -47,19 +47,31 @@ console.log(animaux)
          Retourne la taille du tableau
 */
 
-const city = ['paris', 'Berlin', 'Rome' , 'Londres','moscow' , ' madrid']
-city.splice(5, 1,)
-console.log(city)
+const city = ['paris', 'Berlin', 'Rome' ,'moscow', 'Londres', ' madrid'  ]
+const modifyArray = (array) =>{
+    array.pop()
+    array.unshift('Vienne')
+    array.splice(3, 1, 'Alger') 
+    return array.length 
+}
+const cityLength = modifyArray(city)
 
-city.unshift('Vienne')
-console.log(city)
+// for (.. of ..){ permet de parcourir les elements d'un objets itéral (ex : tableau , string )
+// Sur le tableau animals faire une boucle for () pour afficher tous les élements du tableau
+// Sur le tableau animals faire une boucle for (.. of ..) pour afficher tous les élements du tableau
 
-city.splice(3, 1, 'Alger')
-console.log(city)
+for (let i = 0; i < animals.length; i++) {
+    // console.log(animals[i]);
+  }
 
-console.log(city.length)
+for (let animal of animals) {
+    console.log(animal);
+}
 
-
+// foreach(){est une méthode Js qui permet d'itérer sur les éléments d'un tableau}
+ animals.forEach(function(animal){
+        console.log(animal)
+    })
 
 
 
