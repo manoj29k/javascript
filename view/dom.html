@@ -1,20 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dom</title>
-    <script src="/assets/js/14-dom.js" defer></script>
-</head>
-<body>
-    <h1 id = "title">La Manipulation du DOM en Javascript</h1>
-    <h2 id = "title2" class="title2">Quelques propriétés du CSS</h2>
-    <h2 id = "title2">Pas facile le Javascript</h2>
-    <div>
-        <p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quia. </p>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quia. </p>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quia. </p>
-    </div>
-    
-</body>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Javascript -DOM</title>
+        <link rel="stylesheet" href="../assets/css/dom.css" />
+        <script src="../assets/js/14-dom.js" defer></script>
+        <!-- <script src="../assets/js/15-events.js" defer></script> -->
+    </head>
+    <body>
+        <h1 id="main-title">La manipulation du DOM en Javascript</h1>
+        <h2 class="title" id="title">Quelques propriétés CSS</h2>
+        <h2 class="title txt-uppercase" id="title-2">
+            Pas facile le Javascript
+        </h2>
+        <div class="paragraphe-container" id="paragraphe-container">
+            <h2>Les paragraphes</h2>
+            <p>
+                La méthode javascript getElementById() de l'objet Document
+                permet de sélectionner une balise ayant un attribut id (je
+                précise que la valeur de l'id doit être unique dans votre page
+                HTML).
+            </p>
+            <p>
+                La méthode javascript getElementsByTagName() de l'objet Document
+                ou Element permet de sélectionner une balise par son nom
+                (tagName).
+            </p>
+            <p id="paragraphe-test" class="txt-uppercase">
+                La méthode Javascript getElementsByClassName() de l'objet
+                Document ou Element permet de sélectionner une balise par un
+                identifiant de class CSS contenu dans l'attribut HTML (class).
+            </p>
+            <p>
+                La méthode Javascript querySelector() de l'objet Document ou
+                Element permet de sélectionner une balise grâce à un sélecteur
+                CSS.
+            </p>
+            <p id="paragraphe-with-title">
+                La méthode Javascript querySelectorAll() de l'objet Document ou
+                Element permet de sélectionner une balise grâce à un sélecteur
+                CSS.
+            </p>
+        </div>
+
+        <!-- liste HTML -->
+        <!-- films avengers -->
+
+        <!-- ecouteurs sur le ul -->
+        <!-- li cliqué qui change de taille 28px -->
+    </body>
 </html>

@@ -71,13 +71,3 @@ const modifyArray = (array) => {
 };
 
 const capitalCitiesLength = modifyArray(capitalCities);
-
-
-
-
-
-
-
-
-
-

@@ -1,17 +1,20 @@
-/*--------------------------WINDOW-------------------------- */
+/* --------------------------- WINDOW --------------------------- */
 
 /*
-    l'objet window en javascript est un objet global qui represente la fenêtre du navigateur
-    Cet objet est crée automatiquement lorsque la page web est chargée
+    L'objet window en Javascript est un objet global qui represente la fenêtre du navigateur
+    Cet objet est créé automatiquement lorsque la page Web est chargée
 */
 
+/*
+    L'objet window est objet important en Javascript car il fournit une interface entre le code Javascript et la fenetre du navigateur
+*/
+// console.log(window.prompt());
 
-// L'objet window est un objet inportant en javascript car il fournit une interface entre le code javascript et le fenetre du navigateur 
-console.log(window);
-// la propriété `window.console.log()` permet d'accéder à l'objet console du navigateur
-console.log(window.console.log('hello world'));
+// La propriété `window.console` permet d'accéder à l'objet console
+console.log(window.console);
 
-// la propriété `window.alert()`permet d'afficher une boite de dialogue dans la fenêtre du navigateur
-console.log(window.alert('hello world'));
+// La propriété `window.alert()` permet d'afficher une boite de dialogue
+// window.alert('Hello World !');
 
-
+// La propriété `window.document` permet d'accéder à l'objet document
+console.log(window.document);

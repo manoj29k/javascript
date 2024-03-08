@@ -1,58 +1,125 @@
-// -----------------La Manipulation du DOM en Javascript----------------
+/* --------------------------- Manipulation du DOM --------------------------- */
 
-// Le DOM (Document Object Model) en Javascript 
-// est un erépresentaation en mémoire d'un document HTML chargé par le navigateur.
-// Le DOM represente chaque élément du docoment comme objet Javascript qui peut etre manipulé  et modifié à travers le code javascript
-
-
-// ? La méthode `getElementById()`
-const mainTitle = document.getElementById('title')
-console.log(mainTitle);
-mainTitle.style.color = 'red'
-
-/* 
-    ? La méthode `getElementsByTagName()`
-    getElementsByTagName() permet de recuperer une collection d'elements
-    on pourra itérer avec la boucle for
+/*
+    Le DOM (Document Object Model) en Javascript
+    est une representation en mémoire d'un document HTML chargé par le navigateur
+    Le DOM represente chaque élément du document comme un objet Javascript
+    qui peut être manipulé et modifié à travers le code Javascript
 */
 
-const paragraphes  = document.getElementsByTagName('p')
-// Faire une boucle sur l'HTML collection paragraphes 
-console.log(paragraphes);
-
-for (let i = 0 ; i < paragraphes.length; i++) {
-    paragraphes[i].style.color = 'purple'
-}
-
-/* ? `La méthode getElementsByClassName()` */
-
-const title = document.getElementsByClassName("title2")
-for (let i = 0 ; i < title.length; i++) {
-    title[i].style.backgroundColor = 'purple'
-}
-console.log(title);
-
-
-/* 
-    ? La méthode `querySelector()`
+/*
+    --------------------------------------------------
+    Methodes de selecteurs JavaScript
+    --------------------------------------------------
 */
-const paragraph = document.querySelector('#title2')
-for (let i = 0 ; i < paragraph.length; i++) {
-    paragraph[i].style.font.Size = '50px'
+
+// ? La methode `getElementById()`
+const mainTitle = document.getElementById('main-title');
+mainTitle.style.fontFamily = 'Arial';
+mainTitle.style.fontSize = '50px';
+mainTitle.style.margin = '30px';
+
+/*
+    ? La methode `getElementsByTagName()`
+    getElementsByTagName renvoi une HTMLCollection
+    sur laquelle on pourra itérer avec la boucle for(){}
+*/
+const paragraphes = document.getElementsByTagName('p');
+for (let i = 0; i < paragraphes.length; i++) {
+    paragraphes[i].style.color = 'green';
 }
 
+/*
+    ? La methode `getElementsByClassName()`
+    getElementsByClassName() renvoi une HTMLCollection
+    sur laquelle on pourra itérer avec la boucle for(){}
+*/
+const title = document.getElementsByClassName('title');
+for (let i = 0; i < title.length; i++) {
+    title[i].style.backgroundColor = 'pink';
+    title[i].style.color = '#fff';
+    title[i].style.padding = '15px';
+}
 
-// Récuper tous les paragraphes avec la méthode querySelectorAll()
- const newParagraphes = document.querySelectorAll('p')
-//  console.log(newParagraphes);
-//  for(let paragraph of newParagraphes){
-//     paragraph.style.textDecoration = 'underline'
-//  }
- newParagraphes.forEach(function(paragraph){
-    paragraph.style.textDecoration = 'underline';
-})
+/*
+    ? La methode `querySelector()`
+*/
+const cssProperties = document.querySelector('#title');
+cssProperties.style.fontSize = '40px';
 
-// Selectionner tous les élements qui ont la class txt-uppercase
-// Tous les mettre en majuscules
+/*
+    ? La methode `querySelectorAll()`
+    querySelectorAll() renvoi une NodeList
+    sur laquelle on pourra itérer avec la boucle `for()`, for(...of..) et la méthode `forEach()`
 
-const maj  = document.getElementsByTagName('body')
+*/
+const newParagraphes = document.querySelectorAll('p');
+// for( let paragraphe of newParagraphes){
+//     paragraphe.style.textDecoration = 'underline'
+// }
+
+newParagraphes.forEach(function (paragraphe) {
+    paragraphe.style.textDecoration = 'underline';
+    paragraphe.style.paddingBottom = '20px';
+});
+
+/*
+    --------------------------------------------------
+    Practice
+    --------------------------------------------------
+*/
+
+const txtUppercases = document.querySelectorAll('.paragraphe-container p');
+
+for (let txtUppercase of txtUppercases) {
+    txtUppercase.style.fontStyle = 'italic';
+}
+
+/*
+    --------------------------------------------------
+    Quelques propriétés liées aux éléments du DOM
+    --------------------------------------------------
+*/
+
+// La propriété `style` permet de modifier le style
+mainTitle.style.textTransform = 'uppercase';
+
+// La méthode `classList.add()` permet d'ajouter une classe à un élément HTML.
+mainTitle.classList.add('txt-green', 'test');
+
+// La méthode `classList.remove()` permet d'ajouter une classe à un élément HTML.
+const paragrapheTest = document.querySelector('#paragraphe-test');
+paragrapheTest.classList.remove('txt-uppercase');
+
+// La méthode `classList.contains()` permet de vérifier si un élément HTML possède une classe donnée.
+const title2 = document.querySelector('#title-2');
+const isTitle = title2.classList.contains('chaussette');
+
+// La propriété `innerHTML` permet de récupérer ou de définir le contenu HTML d'un élément HTML (le HTML est interprété).
+title2.innerHTML = "C'est <em>pas si dur</em> le Js";
+
+// La propriété `textContent` permet de récupérer ou de définir le contenu textuel d'un élément HTML.
+title2.textContent = "C'est <strong> passi dur </strong> le Js";
+
+// La méthode `setAttribute()` permet de définir la valeur d'un attribut HTML.
+const paragrapheWithTitle = document.querySelector('#paragraphe-with-title');
+paragrapheTest.setAttribute('title', 'Je suis encore une pop up');
+paragrapheWithTitle.title = 'Je suis aussi une pop-up';
+
+/*
+    -------------------------------------------
+    Créer des elements en Javascript
+    -------------------------------------------
+*/
+
+const newParagraphe = document.createElement('p');
+newParagraphe.classList.add('new-paragraphe');
+newParagraphe.textContent = 'Je suis un nouvel element créé en Js';
+
+const paragrapheContainer = document.querySelector('#paragraphe-container');
+
+// `append()` ajoute un element à la fin
+// paragrapheContainer.append(newParagraphe)
+
+// `prepend()` ajoute un element au debut
+paragrapheContainer.prepend(newParagraphe);
