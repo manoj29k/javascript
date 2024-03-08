@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="/assets/css/formulaire.css" />
+    <script src="/assets/js/formulaire.js" defer></script>
+  </head>
+  <body>
+    <h1>Formulaire d'inscrition</h1>
+    <main>
+      <form
+        action=""
+        class="formulaire-inscription"
+        id="formulaire-inscription"
+      >
+        <div class="inside-block">
+          <label for="name">Nom</label>
+          <input type="text" id="name" />
+        </div>
+        <div class="inside-block">
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+        </div>
+        <div class="inside-block">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="password" />
+        </div>
+        <div class="inside-block">
+          <label for="confirm-password">Confirmez Votre Mot De Passe</label>
+          <input
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+          />
+        </div>
+        <button id="submit" class="submit inside-block">Envoyer</button>
+      </form>
+    </main>
+  </body>
+</html>

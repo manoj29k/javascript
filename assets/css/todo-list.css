@@ -9,9 +9,15 @@ body {
 }
 
 main {
-    background-color: violet;
+    
     width: 500px;
-    margin: auto;
-
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 150px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px grey;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
     
 }
